@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Éducatif : Moteurs Électriques et Conversion Énergétique</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #00008b, #1e90ff, #ff8c00, #ff4500);
+            color: #333;
+            line-height: 1.6;
+            background-size: 200% 200%;
+            animation: energyFlow 15s ease infinite;
+        }
+        @keyframes energyFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 139, 0.8);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-bottom: 2px solid #ff4500;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff4500;
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        nav {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #00008b;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: #ff4500;
+            color: white;
+        }
+        section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: #00008b;
+            font-size: 1.8em;
+            border-bottom: 2px solid #ff4500;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: #ff4500;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #ff4500;
+            border-radius: 8px;
+            max-width: 100%;
+        }
+        a[target="_blank"] {
+            color: #ff4500;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a[target="_blank"]:hover {
+            color: #00008b;
+            text-decoration: underline;
+        }
+        .quiz {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .quiz label {
+            display: block;
+            margin: 10px 0;
+        }
+        .quiz button {
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .quiz button:hover {
+            background: #00008b;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .checklist {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #6dd5ed;
+            margin-top: 20px;
+        }
+        .checklist label {
+            display: block;
+            margin: 10px 0;
+        }
+        .summary {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #ff4500;
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #00008b;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Moteurs Électriques et Conversion Énergétique</h1>
+        <p>Site éducatif pour élèves de Bac Pro : Principes de conversion et expériences sur moteurs CC et asynchrones.</p>
+    </header>
+    
+    <nav>
+        <a href="#section1">Bilan de Puissance</a>
+        <a href="#section2">Reconnaissance Moteurs</a>
+        <a href="#section3">Moteur CC</a>
+        <a href="#section4">Moteur Asynchrone</a>
+    </nav>
+    
+    <section id="section1">
+        <h2>Pour un moteur, mettre en évidence expérimentalement le principe de conversion d’énergie électromécanique par un bilan de puissance</h2>
+        <p>Cette expérience montre la conversion d'énergie électrique en mécanique dans un moteur, en mesurant les puissances pour établir un bilan.</p>
+        <h3>Étapes de l'expérience :</h3>
+        <ul>
+            <li>Montez un circuit avec un moteur (CC ou asynchrone), un wattmètre pour la puissance électrique, et un dynamomètre pour la puissance mécanique.</li>
+            <li>Mesurez la puissance absorbée (électrique) et la puissance utile (mécanique).</li>
+            <li>Calculez le rendement (Puissance utile / Puissance absorbée) et identifiez les pertes (thermiques, mécaniques).</li>
+            <li>Comparez les valeurs pour vérifier le principe de conservation d'énergie.</li>
+        </ul>
+        <p>Vidéo illustrant le bilan de puissance :</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vAOmbsjQ8gY?si=K-kyxixB2cDfCX5j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        
+        <h3>Récapitulatif du cours</h3>
+        <div class="summary">
+            Un moteur convertit l'énergie électrique en énergie mécanique. Le bilan de puissance inclut la puissance absorbée (P_abs = U * I pour CC, ou P_abs = √3 * U * I * cosφ pour asynchrone), la puissance utile (P_u = T * ω, où T est le couple et ω la vitesse angulaire), et les pertes (joule, fer, mécaniques). Le rendement η = P_u / P_abs < 1.
+        </div>
+        
+        <h3>Quiz Progressif : Testez vos connaissances</h3>
+        <p>Questions progressives : faciles, moyennes, difficiles.</p>
+        <div class="quiz">
+            <form id="quiz1">
+                <p>1. (Facile) Que convertit un moteur électrique ?</p>
+                <label><input type="radio" name="q1" value="a"> Énergie mécanique en électrique</label>
+                <label><input type="radio" name="q1" value="b"> Énergie électrique en mécanique</label>
+                <label><input type="radio" name="q1" value="c"> Énergie thermique en électrique</label>
+                
+                <p>2. (Facile) Quel est le rendement d'un moteur ?</p>
+                <label><input type="radio" name="q2" value="a"> Puissance absorbée / Puissance utile</label>
+                <label><input type="radio" name="q2" value="b"> Puissance utile / Puissance absorbée</label>
+                <label><input type="radio" name="q2" value="c"> Puissance perdue / Puissance absorbée</label>
+                
+                <p>3. (Moyen) Quel outil mesure la puissance mécanique ?</p>
+                <label><input type="radio" name="q3" value="a"> Wattmètre</label>
+                <label><input type="radio" name="q3" value="b"> Dynamomètre</label>
+                <label><input type="radio" name="q3" value="c"> Oscilloscope</label>
+                
+                <p>4. (Moyen) Quelles sont des pertes dans un moteur ?</p>
+                <label><input type="radio" name="q4" value="a"> Joule, fer, mécaniques</label>
+                <label><input type="radio" name="q4" value="b"> Uniquement joule</label>
+                <label><input type="radio" name="q4" value="c"> Aucune perte</label>
+                
+                <p>5. (Difficile) Expliquez comment calculer le rendement d'un moteur (réponse ouverte).</p>
+                <textarea name="q5" rows="3" placeholder="Votre réponse..."></textarea>
+                
+                <button type="button" onclick="checkQuiz1()">Soumettre</button>
+            </form>
+            <div id="result1" class="result"></div>
+        </div>
+        
+        <div class="checklist">
+            <h3>Auto-évaluation des compétences</h3>
+            <p>Cochez les compétences que vous jugez acquises :</p>
+            <label><input type="checkbox"> Mettre en évidence expérimentalement la conversion électromécanique par bilan de puissance.</label>
+            <label><input type="checkbox"> Calculer le rendement d'un moteur.</label>
+            <label><input type="checkbox"> Identifier les pertes énergétiques.</label>
+            <label><input type="checkbox"> Utiliser des outils de mesure comme wattmètre et dynamomètre.</label>
+        </div>
+    </section>
+    
+    <section id="section2">
+        <h2>Reconnaître un moteur à courant continu et un moteur asynchrone à partir de sa plaque signalétique</h2>
+        <p>Cette section enseigne à identifier les types de moteurs via leur plaque signalétique, qui contient des infos comme tension, courant, puissance, vitesse.</p>
+        <h3>Étapes :</h3>
+        <ul>
+            <li>Observez la plaque : pour CC, cherchez "DC" ou tension continue (ex. 12V DC).</li>
+            <li>Pour asynchrone, cherchez "AC" ou indications triphasées, fréquence (50 Hz), et glissement.</li>
+            <li>Comparez les caractéristiques : CC a souvent un balai, asynchrone est cage d'écureuil.</li>
+        </ul>
+        <p>Vidéo sur les plaques signalétiques :</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oM4w_ETnZwE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <h3>Récapitulatif du cours</h3>
+        <div class="summary">
+            La plaque signalétique d'un moteur CC indique tension continue, courant, puissance, vitesse nominale. Pour un moteur asynchrone, elle inclut tension alternative, fréquence, nombre de pôles, puissance, facteur de puissance. Cela permet de distinguer : CC pour applications précises, asynchrone pour robustesse industrielle.
+        </div>
+        
+        <h3>Quiz Progressif : Testez vos connaissances</h3>
+        <p>Questions progressives : faciles, moyennes, difficiles.</p>
+        <div class="quiz">
+            <form id="quiz2">
+                <p>1. (Facile) Que indique "DC" sur une plaque ?</p>
+                <label><input type="radio" name="q1" value="a"> Courant alternatif</label>
+                <label><input type="radio" name="q1" value="b"> Courant continu</label>
+                <label><input type="radio" name="q1" value="c"> Puissance</label>
+                
+                <p>2. (Facile) Quel moteur mentionne souvent une fréquence comme 50 Hz ?</p>
+                <label><input type="radio" name="q2" value="a"> Moteur CC</label>
+                <label><input type="radio" name="q2" value="b"> Moteur asynchrone</label>
+                <label><input type="radio" name="q2" value="c"> Les deux</label>
+                
+                <p>3. (Moyen) Quel est un critère pour identifier un moteur asynchrone ?</p>
+                <label><input type="radio" name="q3" value="a"> Tension continue</label>
+                <label><input type="radio" name="q3" value="b"> Nombre de pôles et glissement</label>
+                <label><input type="radio" name="q3" value="c"> Balai collecteur</label>
+                
+                <p>4. (Moyen) Quelle info est commune aux deux types ?</p>
+                <label><input type="radio" name="q4" value="a"> Puissance nominale</label>
+                <label><input type="radio" name="q4" value="b"> Fréquence</label>
+                <label><input type="radio" name="q4" value="c"> Glissement</label>
+                
+                <p>5. (Difficile) Décrivez comment distinguer les deux moteurs via la plaque (réponse ouverte).</p>
+                <textarea name="q5" rows="3" placeholder="Votre réponse..."></textarea>
+                
+                <button type="button" onclick="checkQuiz2()">Soumettre</button>
+            </form>
+            <div id="result2" class="result"></div>
+        </div>
+        
+        <div class="checklist">
+            <h3>Auto-évaluation des compétences</h3>
+            <p>Cochez les compétences que vous jugez acquises :</p>
+            <label><input type="checkbox"> Reconnaître un moteur CC à partir de sa plaque.</label>
+            <label><input type="checkbox"> Reconnaître un moteur asynchrone à partir de sa plaque.</label>
+            <label><input type="checkbox"> Comprendre les indications clés comme tension, courant, fréquence.</label>
+            <label><input type="checkbox"> Comparer les caractéristiques des deux types de moteurs.</label>
+        </div>
+    </section>
+    
+    <section id="section3">
+        <h2>Pour un moteur à courant continu, vérifier expérimentalement l’influence de la valeur de la tension d’alimentation sur sa fréquence de rotation</h2>
+        <p>Expérience pour montrer que la vitesse de rotation d'un moteur CC augmente avec la tension.</p>
+        <h3>Étapes :</h3>
+        <ul>
+            <li>Connectez un moteur CC à une alimentation variable.</li>
+            <li>Variez la tension (ex. 3V, 6V, 9V, 12V).</li>
+            <li>Mesurez la fréquence de rotation avec un tachymètre ou oscilloscope.</li>
+            <li>Tracez un graphique vitesse vs tension pour observer la proportionnalité.</li>
+        </ul>
+        <p>Vidéo sur l'influence de la tension :</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Mb6bUT8PVmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <h3>Récapitulatif du cours</h3>
+        <div class="summary">
+            Dans un moteur CC, la vitesse de rotation ω est proportionnelle à la tension U (ω ∝ U - k*I, où k est une constante et I le courant). L'augmentation de tension accroît le couple électromagnétique, accélérant la rotation jusqu'à l'équilibre avec le couple résistant.
+        </div>
+        
+        <h3>Quiz Progressif : Testez vos connaissances</h3>
+        <p>Questions progressives : faciles, moyennes, difficiles.</p>
+        <div class="quiz">
+            <form id="quiz3">
+                <p>1. (Facile) Que se passe-t-il si on augmente la tension d'un moteur CC ?</p>
+                <label><input type="radio" name="q1" value="a"> Vitesse diminue</label>
+                <label><input type="radio" name="q1" value="b"> Vitesse augmente</label>
+                <label><input type="radio" name="q1" value="c"> Aucune influence</label>
+                
+                <p>2. (Facile) Quel outil mesure la rotation ?</p>
+                <label><input type="radio" name="q2" value="a"> Multimètre</label>
+                <label><input type="radio" name="q2" value="b"> Tachymètre</label>
+                <label><input type="radio" name="q2" value="c"> Wattmètre</label>
+                
+                <p>3. (Moyen) La relation vitesse-tension est-elle linéaire ?</p>
+                <label><input type="radio" name="q3" value="a"> Oui, toujours</label>
+                <label><input type="radio" name="q3" value="b"> Approximativement, sans charge</label>
+                <label><input type="radio" name="q3" value="c"> Non</label>
+                
+                <p>4. (Moyen) Pourquoi la vitesse augmente-t-elle avec la tension ?</p>
+                <label><input type="radio" name="q4" value="a"> Augmente le courant</label>
+                <label><input type="radio" name="q4" value="b"> Augmente le couple électromagnétique</label>
+                <label><input type="radio" name="q4" value="c"> Diminue les pertes</label>
+                
+                <p>5. (Difficile) Expliquez la formule de la vitesse pour un moteur CC (réponse ouverte).</p>
+                <textarea name="q5" rows="3" placeholder="Votre réponse..."></textarea>
+                
+                <button type="button" onclick="checkQuiz3()">Soumettre</button>
+            </form>
+            <div id="result3" class="result"></div>
+        </div>
+        
+        <div class="checklist">
+            <h3>Auto-évaluation des compétences</h3>
+            <p>Cochez les compétences que vous jugez acquises :</p>
+            <label><input type="checkbox"> Vérifier expérimentalement l'influence de la tension sur la rotation d'un moteur CC.</label>
+            <label><input type="checkbox"> Utiliser un tachymètre pour mesurer la vitesse.</label>
+            <label><input type="checkbox"> Tracer un graphique vitesse vs tension.</label>
+            <label><input type="checkbox"> Comprendre la proportionnalité entre tension et vitesse.</label>
+        </div>
+    </section>
+    
+    <section id="section4">
+        <h2>Pour un moteur asynchrone, vérifier expérimentalement l’influence de la fréquence de la tension d’alimentation sur sa fréquence de rotation</h2>
+        <p>Expérience pour montrer que la vitesse d'un moteur asynchrone dépend de la fréquence d'alimentation.</p>
+        <h3>Étapes :</h3>
+        <ul>
+            <li>Connectez un moteur asynchrone à un variateur de fréquence.</li>
+            <li>Variez la fréquence (ex. 30 Hz, 50 Hz, 70 Hz).</li>
+            <li>Mesurez la fréquence de rotation avec un tachymètre.</li>
+            <li>Calculez le glissement et tracez un graphique rotation vs fréquence.</li>
+        </ul>
+        <p>Vidéo sur l'influence de la fréquence :</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Mb6bUT8PVmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <h3>Récapitulatif du cours</h3>
+        <div class="summary">
+            Pour un moteur asynchrone, la vitesse de synchronisme n_s = (60 * f) / p, où f est la fréquence et p le nombre de paires de pôles. La vitesse réelle n = n_s * (1 - g), avec g le glissement. L'augmentation de fréquence accroît la vitesse, mais le glissement ajuste selon la charge.
+        </div>
+        
+        <h3>Quiz Progressif : Testez vos connaissances</h3>
+        <p>Questions progressives : faciles, moyennes, difficiles.</p>
+        <div class="quiz">
+            <form id="quiz4">
+                <p>1. (Facile) Que se passe-t-il si on augmente la fréquence d'un moteur asynchrone ?</p>
+                <label><input type="radio" name="q1" value="a"> Vitesse diminue</label>
+                <label><input type="radio" name="q1" value="b"> Vitesse augmente</label>
+                <label><input type="radio" name="q1" value="c"> Aucune influence</label>
+                
+                <p>2. (Facile) Quel outil varie la fréquence ?</p>
+                <label><input type="radio" name="q2" value="a"> Multimètre</label>
+                <label><input type="radio" name="q2" value="b"> Variateur de fréquence</label>
+                <label><input type="radio" name="q2" value="c"> Tachymètre</label>
+                
+                <p>3. (Moyen) Quelle est la formule de la vitesse de synchronisme ?</p>
+                <label><input type="radio" name="q3" value="a"> n_s = f * p</label>
+                <label><input type="radio" name="q3" value="b"> n_s = (60 * f) / p</label>
+                <label><input type="radio" name="q3" value="c"> n_s = f / 60</label>
+                
+                <p>4. (Moyen) Qu'est-ce que le glissement ?</p>
+                <label><input type="radio" name="q4" value="a"> Différence entre n_s et n</label>
+                <label><input type="radio" name="q4" value="b"> Vitesse réelle</label>
+                <label><input type="radio" name="q4" value="c"> Fréquence d'alimentation</label>
+                
+                <p>5. (Difficile) Expliquez l'influence de la fréquence sur la rotation (réponse ouverte).</p>
+                <textarea name="q5" rows="3" placeholder="Votre réponse..."></textarea>
+                
+                <button type="button" onclick="checkQuiz4()">Soumettre</button>
+            </form>
+            <div id="result4" class="result"></div>
+        </div>
+        
+        <div class="checklist">
+            <h3>Auto-évaluation des compétences</h3>
+            <p>Cochez les compétences que vous jugez acquises :</p>
+            <label><input type="checkbox"> Vérifier expérimentalement l'influence de la fréquence sur la rotation d'un moteur asynchrone.</label>
+            <label><input type="checkbox"> Calculer la vitesse de synchronisme.</label>
+            <label><input type="checkbox"> Comprendre le glissement.</label>
+            <label><input type="checkbox"> Utiliser un variateur de fréquence.</label>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Site créé pour les élèves de Bac Pro. Conforme au programme officiel. Sources : YouTube et ressources éducatives.</p>
+    </footer>
+
+    <script>
+        function checkQuiz1() {
+            const form = document.getElementById('quiz1');
+            const result = document.getElementById('result1');
+            let score = 0;
+            let feedback = '';
+            
+            const q1 = form.q1.value;
+            if (q1 === 'b') { score += 2; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Énergie électrique en mécanique.</p>'; }
+            
+            const q2 = form.q2.value;
+            if (q2 === 'b') { score += 2; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Puissance utile / Puissance absorbée.</p>'; }
+            
+            const q3 = form.q3.value;
+            if (q3 === 'b') { score += 3; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Dynamomètre.</p>'; }
+            
+            const q4 = form.q4.value;
+            if (q4 === 'a') { score += 3; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Joule, fer, mécaniques.</p>'; }
+            
+            const q5 = form.q5.value.trim().toLowerCase();
+            if (q5.includes('rendement') || q5.includes('utile') || q5.includes('absorbée')) { score += 5; feedback += '<p style="color:green;">Bonne réponse !</p>'; } else { feedback += '<p style="color:red;">À améliorer. Rendement = P_u / P_abs.</p>'; }
+            
+            feedback += `<p>Score : ${score}/15</p>`;
+            result.innerHTML = feedback;
+        }
+
+        function checkQuiz2() {
+            const form = document.getElementById('quiz2');
+            const result = document.getElementById('result2');
+            let score = 0;
+            let feedback = '';
+            
+            const q1 = form.q1.value;
+            if (q1 === 'b') { score += 2; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Courant continu.</p>'; }
+            
+            const q2 = form.q2.value;
+            if (q2 === 'b') { score += 2; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Moteur asynchrone.</p>'; }
+            
+            const q3 = form.q3.value;
+            if (q3 === 'b') { score += 3; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Nombre de pôles et glissement.</p>'; }
+            
+            const q4 = form.q4.value;
+            if (q4 === 'a') { score += 3; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Puissance nominale.</p>'; }
+            
+            const q5 = form.q5.value.trim().toLowerCase();
+            if (q5.includes('dc') || q5.includes('ac') || q5.includes('fréquence')) { score += 5; feedback += '<p style="color:green;">Bonne réponse !</p>'; } else { feedback += '<p style="color:red;">À améliorer. CC : tension continue, asynchrone : fréquence et pôles.</p>'; }
+            
+            feedback += `<p>Score : ${score}/15</p>`;
+            result.innerHTML = feedback;
+        }
+
+        function checkQuiz3() {
+            const form = document.getElementById('quiz3');
+            const result = document.getElementById('result3');
+            let score = 0;
+            let feedback = '';
+            
+            const q1 = form.q1.value;
+            if (q1 === 'b') { score += 2; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Vitesse augmente.</p>'; }
+            
+            const q2 = form.q2.value;
+            if (q2 === 'b') { score += 2; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Tachymètre.</p>'; }
+            
+            const q3 = form.q3.value;
+            if (q3 === 'b') { score += 3; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Approximativement, sans charge.</p>'; }
+            
+            const q4 = form.q4.value;
+            if (q4 === 'b') { score += 3; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Augmente le couple électromagnétique.</p>'; }
+            
+            const q5 = form.q5.value.trim().toLowerCase();
+            if (q5.includes('proportionnelle') || q5.includes('u - k*i')) { score += 5; feedback += '<p style="color:green;">Bonne réponse !</p>'; } else { feedback += '<p style="color:red;">À améliorer. ω ∝ U - k*I.</p>'; }
+            
+            feedback += `<p>Score : ${score}/15</p>`;
+            result.innerHTML = feedback;
+        }
+
+        function checkQuiz4() {
+            const form = document.getElementById('quiz4');
+            const result = document.getElementById('result4');
+            let score = 0;
+            let feedback = '';
+            
+            const q1 = form.q1.value;
+            if (q1 === 'b') { score += 2; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Vitesse augmente.</p>'; }
+            
+            const q2 = form.q2.value;
+            if (q2 === 'b') { score += 2; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Variateur de fréquence.</p>'; }
+            
+            const q3 = form.q3.value;
+            if (q3 === 'b') { score += 3; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : n_s = (60 * f) / p.</p>'; }
+            
+            const q4 = form.q4.value;
+            if (q4 === 'a') { score += 3; feedback += '<p style="color:green;">Correct !</p>'; } else { feedback += '<p style="color:red;">Incorrect. Bonne réponse : Différence entre n_s et n.</p>'; }
+            
+            const q5 = form.q5.value.trim().toLowerCase();
+            if (q5.includes('synchronisme') || q5.includes('glissement')) { score += 5; feedback += '<p style="color:green;">Bonne réponse !</p>'; } else { feedback += '<p style="color:red;">À améliorer. n = n_s * (1 - g), avec n_s ∝ f.</p>'; }
+            
+            feedback += `<p>Score : ${score}/15</p>`;
+            result.innerHTML = feedback;
+        }
+    </script>
+</body>
+</html>
